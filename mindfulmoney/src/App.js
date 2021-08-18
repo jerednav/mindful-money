@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import Expenses from './components/Expenses'
+import AddExpense from './components/AddExpense'
 import { useState } from 'react'
 import { FaTasks, FaTheaterMasks } from 'react-icons/fa'
 
@@ -43,6 +44,7 @@ const toggleBudget = (id) => {
     <div className='container'>
 
       <Header />
+      <AddExpense />
       {expenses.length > 0 ? (
       <Expenses expenses={expenses} onDelete={deleteExpense} 
       onToggle={toggleBudget}
