@@ -27,14 +27,28 @@ const deleteExpense = (id) => {
   setExpenses(expenses.filter((expense) => expense.id !== id))
 }
 
+
+//Toggle Reminder
+const toggleBudget = (id) => {
+  setExpenses(
+    expenses.map((expense) => expense.id === id ? { ...expense, budgeted: !expense.budgeted } : expense
+  )
+  )
+}
+
+
+
+
   return (
     <div className='container'>
 
       <Header />
       {expenses.length > 0 ? (
-      <Expenses expenses={expenses} onDelete={deleteExpense} />
+      <Expenses expenses={expenses} onDelete={deleteExpense} 
+      onToggle={toggleBudget}
+      />
       ) : (
-        'No Tasks To Show'
+        'No Expenses To Show'
       )}
 
     </div>
