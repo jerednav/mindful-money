@@ -1,10 +1,10 @@
 import Expense from './Expense'
 
-const Expenses = ({ expenses }) => {
+const Expenses = ({ expenses, onDelete }) => {
     return (
        <>
         {expenses.map((expense) => ( 
-            <Expense key={expense.id} expense={expense} />
+            <Expense key={expense.id} expense={expense} onDelete={onDelete} />
         ))}
        </>
     )
