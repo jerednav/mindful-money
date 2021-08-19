@@ -1,1 +1,1 @@
-# mindful-money
+#Mindful Money
