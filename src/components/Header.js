@@ -1,3 +1,4 @@
+import React from 'react'
 
 export const Header = () => {
     return (
@@ -6,3 +7,5 @@ export const Header = () => {
         </h2>
     )
 }
+
+export default Header

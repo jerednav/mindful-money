@@ -9,3 +9,5 @@ export const Balance = () => {
         </>
     )
 }
+
+export default Balance
